@@ -1,0 +1,48 @@
+//- Home page
+
+extends templates/layout 
+
+block seo 
+    //- SEO content
+
+block content 
+    //- Main content 
+
+    main.main 
+        div.wrapper-main
+            section.plan
+                span.plan__content MISOCIAL
+                h2.plan__title Select a Plan
+                p.plan__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+            div.select-plan.flex
+                +selectPlan(
+                    "https://github.com/Ezik-o0/img/blob/master/asset-1.png?raw=true", 
+                    "Asset", 
+                    "personal", 
+                    "0", 
+                    "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris ", 
+                    "select plan"
+                )
+                +selectPlan(
+                    "https://github.com/Ezik-o0/img/blob/master/asset-2.png?raw=true", 
+                    "Asset", 
+                    "personal", 
+                    "29", 
+                    "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris ", 
+                    "select plan"
+                )
+                +selectPlan(
+                    "https://github.com/Ezik-o0/img/blob/master/asset-3.png?raw=true", 
+                    "Asset", 
+                    "personal", 
+                    "49", 
+                    "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris ", 
+                    "select plan"
+                )
+        div.main-wrapper
+            div.main-info 
+                section.pricing-table 
+                    span.pricing-table__content SOCIAL MARKETING & ANALYTICS 
+                    h1.pricing-table__title Take control of your data 
+                    button.pricing-table__button__one(type="button") get started
+                    button.pricing-table__button__try(type="button") explore features 

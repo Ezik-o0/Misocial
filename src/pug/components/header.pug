@@ -1,0 +1,24 @@
+//- Header for all pages
+
+header.header 
+    div.wrapper-header.flex
+        div.logo.flex 
+            svg.icon
+                use(xlink:href="#logo")
+            span.logo__text MISOCIAL 
+        +menu.menu-header([
+            { text: "Home", href: "#"},
+            { text: "Why MISOCIAL", href: "#"},
+            { text: "Features", href: "#"},
+            { text: "Articles", href: "#"},
+            { text: "Pricing", href: "#"}
+        ])
+    div.header-info 
+        section.pricing-table 
+            span.pricing-table__content SOCIAL MARKETING & ANALYTICS 
+            h1.pricing-table__title Pricing Table 
+            p.pricing-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut. 
+            div.pricing-table__scroll 
+                a.pricing-table__scroll-link(href="#next-section") 
+                    svg.pricing-table__scroll-icon 
+                        use(xlink:href="#arrow")

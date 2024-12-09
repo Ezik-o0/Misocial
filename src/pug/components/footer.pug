@@ -1,0 +1,37 @@
+//- Footer 
+
+footer.footer 
+    div.wrapper-footer.flex
+        div.logo-footer.flex
+            svg.icon
+                use(xlink:href="#logo")
+            span.logo-footer__text MISOCIAL 
+        +menu([
+            { text: "Home", href: "#"},
+            { text: "Why MISOCIAL", href: "#"},
+            { text: "Features", href: "#"},
+            { text: "Articles", href: "#"},
+            { text: "Pricing", href: "#"}
+        ]) 
+    div.wrapper.flex
+            div.text 
+                p.text__info © 2017 Mass Impressions & Tranmautritam. Make the right impression. 
+            div.social 
+                nav.social-menu
+                    ul.social-menu__list.flex
+                        li.social-menu__item
+                            a.social-menu__link(href="#") 
+                                svg.social-menu__facebook 
+                                    use(xlink:href="#facebook")
+                        li.social-menu__item
+                            a.social-menu__link(href="#") 
+                                svg.social-menu__twitter 
+                                    use(xlink:href="#twitter")
+                        li.social-menu__item
+                            a.social-menu__link(href="#") 
+                                svg.social-menu__google-plus
+                                    use(xlink:href="#google-plus")
+                        li.social-menu__item
+                            a.social-menu__link(href="#") 
+                                svg.social-menu__instagram 
+                                    use(xlink:href="#instagram")

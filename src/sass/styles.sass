@@ -1,0 +1,207 @@
+@import helpers/vars
+@import helpers/mixins
+
+html
+    font-size: 1px
+
+body
+    font-size: 14rem
+    margin: 0
+    margin-top: -20px
+    font-family: "Maven Pro", sans-serif
+    font-weight: 500
+    background-color: $bg-color
+
+.flex
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+
+.wrapper-header,
+.header-info, 
+.wrapper-footer,
+.wrapper,
+.wrapper-main, 
+.main-wrapper
+    margin: auto 
+    max-width: 1900px
+    width: 90%
+
+* 
+    margin: 0
+    padding: 0
+
+@import components/header
+
+
+// Main styles hore 
+
+.wrapper-main
+    padding: 110px 0 0
+
+.plan 
+    text-align: center
+
+.plan__content 
+    position: relative
+    font-size: 14rem
+    letter-spacing: 1px
+    color: $color-text
+    font-weight: 700
+
+.plan__title 
+    padding: 20px 0 25px
+    font-size: 40px
+    letter-spacing: -2px
+    color: $color-price
+
+.plan__content::before 
+    content: ''
+    position: absolute
+    top: 7px
+    right: -35px
+    height: 1px
+    width: 20px
+    background-color: $colot-line
+
+.plan__content::after
+    content: ''
+    position: absolute
+    top: 7px
+    left: -35px
+    height: 1px
+    width: 20px
+    background-color: $colot-line
+
+.plan__text
+    display: inline-block
+    justify-content: center
+    max-width: 375px
+    font-size: 16px
+    line-height: 28px
+    color: $color-text
+
+.select-plan 
+    padding-top: 30px
+    &__asset
+        align-items: center
+        display: flex
+        margin: auto
+        width: 120px
+        height: 110px 
+    &__figure 
+        max-width: 250px
+        margin: 15px 0 15px
+        padding: 30px 30px
+        border-radius: 30px
+        background-color: $buton-cl
+        border: $border
+        &:hover 
+            filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
+    &__title 
+        padding-top: 50px
+        text-align: center
+        font-size: 14rem
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: $color-text
+        font-weight: 700 
+    &__price 
+        font-size: 60px
+        letter-spacing: -2px
+        color: $color-price 
+    &__sup
+        font-size: 18px
+        letter-spacing: -2px
+        color: $color-price
+    &__text 
+        padding: 40px 0 50px
+        font-size: 16px
+        line-height: 28px
+        color: $color-text
+        font-weight: 400
+    &__button 
+        padding: 20px 50px
+        font-size: 12px
+        color: $button-text
+        letter-spacing: 1px
+        border: none
+        text-transform: uppercase
+        font-weight: 700
+        border-radius: 25px
+        filter: $filter
+        background-color: $buton-cl
+        border: $border
+        &:hover
+            color: $buton-cl 
+            background-color: $button-bg
+    &__info 
+        padding-top: 20px
+        text-align: center
+
+.main-wrapper
+    margin: 0
+    position: relative
+    background-image: url(https://github.com/Ezik-o0/img/blob/d4ce3e573bf9d74157f73eb7ed5c0bb1860f6602/footer-map.png?raw=true) 
+    background-repeat: no-repeat 
+    margin: 100px 0 0
+    width: 100%
+    height: 450px
+    background-size: cover
+    
+.main-wrapper::before
+    content: '' 
+    position: absolute
+    top: 0
+    left: 0
+    margin: -100px 0
+    width: 100%
+    height: 550px
+    opacity: 0.8
+    background-image: $bg-gradient 
+
+.main-info 
+    padding-top: 70px
+    opacity: 0.8
+    text-align: center
+
+.pricing-table 
+    padding: 0 15px
+
+.pricing-table__button__one 
+    margin-bottom: 15px
+    padding: 20px 50px
+    border: none
+    border-radius: 27px
+    background-color: $button-bg
+    font-size: 12px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $buton-cl
+    text-align: center 
+
+.pricing-table__button__one:hover
+    color: $button-text
+    background-color: $buton-cl
+    border: $border
+
+.pricing-table__button__try
+    margin-left: 10px
+    font-size: 12px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $button-text
+    padding: 20px 50px
+    border-radius: 27px
+    filter: $filter
+    background-color: $buton-cl
+    border: none
+    border: $border
+
+.pricing-table__button__try:hover 
+    background-color: $button-bg
+    color: $buton-cl
+    border: none
+
+@import components/footer

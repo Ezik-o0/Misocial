@@ -1,0 +1,31 @@
+//- Mixins 
+
+mixin selectPlan(imageSrc, imageAlt, title, price, description, buttonText) 
+    figure.select-plan__figure.flex
+        img.select-plan__asset(src=imageSrc alt=imageAlt) 
+        h3.select-plan__title #{title} 
+            figcaption.select-plan__info 
+                p.select-plan__price 
+                    span.select-plan__sup $ #{price} 
+                    span.select-plan__sup /month 
+                p.select-plan__text #{description} 
+                button.select-plan__button #{buttonText} 
+
+mixin menu(items, menuClass = "") 
+    nav.menu-header.menu-footer
+        div.menu__noyt 
+            ul.menu__list.flex
+                each item in items
+                    li.menu__item
+                        a.menu__link(href=item.href) #{item.text} 
+                li.menu__item 
+                    button.menu__button--primary(type="button") #{"Get Started"}
+        
+        div.menu__burger#menu__burger
+            span.menu__line 
+        ul.menu__burger__list.flex
+            each item in items
+                li.menu__item
+                    a.menu__link(href=item.href) #{item.text} 
+            li.menu__item 
+                button.menu__button--primary(type="button") #{"Get Started"}

@@ -1,0 +1,129 @@
+=media ($size)
+    @media screen and (min-width: #{$size}px)
+        @content 
+
++media(320)
+    .menu__noyt 
+        display: none
+    .menu__burger__list
+        display: none
+
++media(375) 
+    .menu__mobile
+        right: 18.5px
+
+    .pricing-table__description
+        padding-bottom: 160px 
+
++media(425) 
+    .menu__mobile
+        right: 22px
+
+    .logo__text 
+        font-size: 25rem 
+
+    .select-plan__figure 
+        max-width: 600px
+
++media(758)
+    .menu__mobile
+        right: 38.5px
+
+    .menu__button--primary
+        padding: 20px 50px
+
+    .icon 
+        width: 50px
+
+    .logo__text 
+        font-size: 30rem 
+
+    .plan__title 
+        font-size: 50rem
+
+    .plan__content 
+        font-size: 15rem
+
+    .pricing-table__content 
+        font-size: 12rem
+        
+    .pricing-table__title 
+        font-size: 60rem
+
+    .pricing-table__description
+        padding-bottom: 150px 
+    
+    .select-plan__figure 
+        max-width: 250px
+
+    .text__info
+        padding: 0
+
+    .social 
+        margin: 0
+
++media(1024) 
+    .menu__noyt 
+        display: block
+    
+    .menu__burger__list
+        display: none
+
+    .menu__burger
+        display: none
+
+    .plan__content 
+        font-size: 16rem
+
+    .pricing-table__title 
+        font-size: 70rem
+
+    .pricing-table__description
+        padding-bottom: 140px 
+
+    .select-plan 
+        padding-top: 80px
+
++media(1440)
+    .menu__item 
+        padding: 0 15px
+
+    .icon
+        width: 55px 
+    
+    .select-plan 
+        padding: 80px 130px 
+    
+@mixin menu-style($text-color, $hover-color, $font-size: 16px, $gap: 20px) 
+    .menu__list,
+    .menu__burger__list
+        list-style: none
+        gap: $gap 
+
+        .menu__item
+            list-style: none 
+            position: relative
+            .menu__link
+                font-size: $font-size 
+                color: $text-color
+                text-decoration: none 
+            .menu__link::before
+                content: '' 
+                position: absolute
+                transition: width 0.3s ease
+                bottom: -10px
+                left: 0
+                width: 0
+                height: 2px
+                background-color: $color
+            .menu__link:hover::before
+                width: 100% 
+            .menu__button--primary
+                padding: 10px 25px
+                font-size: 12px
+                text-transform: uppercase
+                color: #fff
+                text-align: center
+                border-radius: 25px
+                background-color: rgba(110,69,226,0)
+                border: $border-menu  

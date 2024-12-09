@@ -1,0 +1,133 @@
+// Header css
+
+.header 
+    background: $bg-gradient, url(../img/baner-header.jpg)
+    background-repeat: no-repeat 
+    height: 650px
+    background-size: cover
+
+.wrapper-header
+    padding-top: 25px
+
+.icon
+    padding-right: 15px
+    width: 45px
+    height: 55px
+
+.logo__text
+    font-weight: 700
+    letter-spacing: 6px
+    font-size: 22rem
+    color: $color
+
+.menu__burger
+    position: relative
+    width: 40px
+    height: 29px
+    z-index: 2
+
+.menu__line
+    content: ''
+    position: absolute
+    top: 12.5px
+    left: 0
+    width: 100%
+    height: 5px
+    background-color: #fff
+    border-radius: 2px
+
+.menu__mobile
+    position: fixed
+    top: 34.5px
+    right: 16px
+
+.menu__line::before,
+.menu__line::after
+    content: ''
+    position: absolute
+    left: 0
+    height: 5px
+    width: 100%
+    background-color: #fff
+    border-radius: 2px
+
+.menu__line::before
+    top: -12px
+
+.menu__line::after
+    top: 12px
+
+.menu__mobile+.menu__burger__list
+    display: flex
+    position: fixed
+    top: 0
+    right: 0
+    width: 60vw
+    height: 100vh
+    box-shadow: -20px 0px 44px -10px #2f2851
+    background-color: #535991
+    flex-direction: column
+    justify-content: start
+    padding: 120px 0
+    gap: 40px
+    z-index: 1
+
+.menu-header
+  @include menu-style(#fff, none, 14px, 20px)
+
+.header-info 
+    padding-top: 120px
+    opacity: 0.8
+    text-align: center 
+
+.pricing-table__content 
+    position: relative
+    font-weight: 700
+    font-size: 11rem
+    letter-spacing: 1px
+    color: $color 
+
+.pricing-table__content::before 
+    content: ''
+    position: absolute
+    top: 6px
+    right: -35px
+    height: 1px
+    width: 20px
+    background-color: #fff 
+
+.pricing-table__content::after
+    content: ''
+    position: absolute
+    top: 6px
+    left: -35px
+    height: 1px
+    width: 20px
+    background-color: #fff 
+
+.pricing-table__title 
+    margin: 0
+    padding-top: 20px
+    padding-bottom: 10px
+    font-size: 45rem
+    letter-spacing: -3px
+    color: $color 
+
+.pricing-table__description
+    display: inline-block
+    max-width: 375px
+    padding-bottom: 160px
+    font-size: 16px
+    line-height: 28px
+    color: $color
+
+.pricing-table__scroll-icon
+    width: 65px
+    height: 65px 
+
+.pricing-table__scroll-icon:hover 
+    padding-top: 5px
+    width: 70px
+    height: 80px
+    transform: translate(5, 0) 
+    transition: 0.1s ease 
