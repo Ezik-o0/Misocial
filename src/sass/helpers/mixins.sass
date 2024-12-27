@@ -54,7 +54,7 @@
         padding-bottom: 150px 
     
     .select-plan__figure 
-        max-width: 250px
+        max-width: 240px
 
     .text__info
         padding: 0
@@ -85,15 +85,19 @@
         padding-top: 80px
 
 +media(1440)
+    .select-plan__figure 
+        max-width: 265px
+
     .menu__item 
         padding: 0 15px
 
     .icon
         width: 55px 
     
-    .select-plan 
-        padding: 80px 130px 
-    
++media(1700)
+    .select-plan__figure 
+        max-width: 340px
+
 @mixin menu-style($text-color, $hover-color, $font-size: 16px, $gap: 20px) 
     .menu__list,
     .menu__burger__list
@@ -104,26 +108,42 @@
             list-style: none 
             position: relative
             .menu__link
-                font-size: $font-size 
-                color: $text-color
+                font-size: 16px
                 text-decoration: none 
-            .menu__link::before
-                content: '' 
-                position: absolute
-                transition: width 0.3s ease
-                bottom: -10px
-                left: 0
-                width: 0
-                height: 2px
-                background-color: $color
-            .menu__link:hover::before
-                width: 100% 
+                &--light 
+                    color: $color 
+                    &::before
+                        content: '' 
+                        position: absolute
+                        transition: width 0.3s ease
+                        bottom: -10px
+                        left: 0
+                        width: 0
+                        height: 2px
+                    &:hover::before
+                        width: 100%
+                &--dark 
+                    color: #6a6a77
+                    &:hover 
+                        color: #756edc
             .menu__button--primary
-                padding: 10px 25px
                 font-size: 12px
                 text-transform: uppercase
-                color: #fff
                 text-align: center
-                border-radius: 25px
-                background-color: rgba(110,69,226,0)
-                border: $border-menu  
+                &--light 
+                    background-color: rgba(110,69,226,0)
+                    border: $border-menu 
+                    border-radius: 25px
+                    padding: 15px 40px 
+                    color: #fff 
+                    &:hover 
+                        background-color: rgba(110,69,226,3)
+                &--dark 
+                    border-radius: 25px
+                    border: none
+                    background-color: #6e45e2
+                    border: 1px solid #6e45e2
+                    padding: 15px 40px 
+                    color: #fff
+                    &:hover 
+                        background-color: #6e85e2
