@@ -27,7 +27,7 @@ mixin menu(items, menuClass = "",  themeLight = true)
             ul.menu__burger__list.flex
                 each item in items
                     li.menu__item
-                        a.menu__link(href=item.href) #{item.text} 
+                        a.menu__link.menu__link--light(href=item.href) #{item.text} 
                 li.menu__item 
                     button.menu__button--primary--light(type="button") #{"Get Started"}
     else  
@@ -45,6 +45,6 @@ mixin menu(items, menuClass = "",  themeLight = true)
             ul.menu__burger__list.flex
                 each item in items
                     li.menu__item
-                        a.menu__link(href=item.href) #{item.text} 
+                        a.menu__link.menu__link--dark(href=item.href) #{item.text} 
                 li.menu__item 
                     button.menu__button--primary--dark(type="button") #{"Get Started"}

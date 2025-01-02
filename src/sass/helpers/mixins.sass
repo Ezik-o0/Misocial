@@ -5,8 +5,12 @@
 +media(320)
     .menu__noyt 
         display: none
+        
     .menu__burger__list
         display: none
+
+    .pricing-table__button__try 
+        margin-left: 0
 
 +media(375) 
     .menu__mobile
@@ -24,6 +28,9 @@
 
     .select-plan__figure 
         max-width: 600px
+
+    .pricing-table__button__try 
+        margin-left: 10px
 
 +media(515)
     .main-info 
@@ -107,13 +114,12 @@
     .menu__burger__list
         list-style: none
         gap: $gap 
-
         .menu__item
             list-style: none 
             position: relative
             .menu__link
                 font-size: 16px
-                text-decoration: none 
+                text-decoration: none  
                 &--light 
                     color: $color 
                     &::before
@@ -124,8 +130,9 @@
                         left: 0
                         width: 0
                         height: 2px
-                    &:hover::before
-                        width: 100%
+                        &:hover::before
+                            width: 100%
+                            color: #000
                 &--dark 
                     color: #6a6a77
                     &:hover 
@@ -142,6 +149,7 @@
                     color: #fff 
                     &:hover 
                         background-color: rgba(110,69,226,3)
+                        transition: .3s
                 &--dark 
                     border-radius: 25px
                     border: none
@@ -151,5 +159,6 @@
                     color: #fff
                     &:hover 
                         background-color: #6e85e2
-   .menu__mobile~.menu__burger__list 
-        display: flex
+                        transition: .3s
+    .menu__mobile~.menu__burger__list 
+        display: flex  
