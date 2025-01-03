@@ -24,7 +24,7 @@ mixin menu(items, menuClass = "",  themeLight = true)
             
             div.menu__burger#menu__burger
                 span.menu__line 
-            ul.menu__burger__list.flex
+            ul.menu__burger__list
                 each item in items
                     li.menu__item
                         a.menu__link.menu__link--light(href=item.href) #{item.text} 
@@ -40,11 +40,11 @@ mixin menu(items, menuClass = "",  themeLight = true)
                     li.menu__item 
                         button.menu__button--primary--dark(type="button") #{"Get Started"}
             
-            div.menu__burger#menu__burger
+            div.menu__burger__footer
                 span.menu__line 
-            ul.menu__burger__list.flex
-                each item in items
-                    li.menu__item
-                        a.menu__link.menu__link--dark(href=item.href) #{item.text} 
-                li.menu__item 
-                    button.menu__button--primary--dark(type="button") #{"Get Started"}
+                ul.menu__burgerr__list.flex
+                    each item in items
+                        li.menu__item
+                            a.menu__link.menu__link--dark(href=item.href) #{item.text} 
+                    li.menu__item 
+                        button.menu__button--primary--dark(type="button") #{"Get Started"}

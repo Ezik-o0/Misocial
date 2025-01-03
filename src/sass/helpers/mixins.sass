@@ -5,24 +5,15 @@
 +media(320)
     .menu__noyt 
         display: none
-        
-    .menu__burger__list
-        display: none
 
     .pricing-table__button__try 
         margin-left: 0
 
 +media(375) 
-    .menu__mobile
-        right: 18.5px
-
     .pricing-table__description
         padding-bottom: 160px 
 
 +media(425) 
-    .menu__mobile
-        right: 22px
-
     .logo__text 
         font-size: 25rem 
 
@@ -33,13 +24,13 @@
         margin-left: 10px
 
 +media(515)
+    .menu__burgerr__list 
+        flex-direction: row
+
     .main-info 
         padding-top: 130px
 
 +media(758)
-    .menu__mobile
-        right: 38.5px
-
     .menu__button--primary
         padding: 20px 50px
 
@@ -80,7 +71,8 @@
     .menu__burger__list
         display: none
 
-    .menu__burger
+    .menu__burger,
+    .menu__burger__footer
         display: none
 
     .plan__content 
@@ -111,7 +103,8 @@
 
 @mixin menu-style($text-color, $hover-color, $font-size: 16px, $gap: 20px) 
     .menu__list,
-    .menu__burger__list
+    .menu__burger__list,
+    .menu__burgerr__list
         list-style: none
         gap: $gap 
         .menu__item
@@ -130,9 +123,9 @@
                         left: 0
                         width: 0
                         height: 2px
-                        &:hover::before
-                            width: 100%
-                            color: #000
+                        background: #fff
+                    &:hover::before
+                        width: 100%
                 &--dark 
                     color: #6a6a77
                     &:hover 
@@ -159,6 +152,4 @@
                     color: #fff
                     &:hover 
                         background-color: #6e85e2
-                        transition: .3s
-    .menu__mobile~.menu__burger__list 
-        display: flex  
+                        transition: .3s 
